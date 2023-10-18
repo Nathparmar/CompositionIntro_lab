@@ -1,7 +1,5 @@
 import products.Product;
-import vehicles.Bicycle;
-import vehicles.Car;
-import vehicles.Engine;
+import vehicles.*;
 
 public class Runner {
 
@@ -16,7 +14,20 @@ public class Runner {
         Engine betterEngine = new Engine(300, 400);
         car.setEngine(betterEngine);
         System.out.println(car.getHp());
+
+        Speedboat speedboat = new Speedboat(
+            200,
+            120,
+            new Product(10000, 3, " 2016 Speedboat"),"long", new Motor(150,300));
+        System.out.println(speedboat.getHullType());
+        Motor bettermotor = new Motor(150,300);
+        speedboat.setMotor(bettermotor);
+        System.out.println(speedboat.getFuel());
+
     }
+
+
+
 
 
 }
